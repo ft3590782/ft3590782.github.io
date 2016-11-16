@@ -1,0 +1,22 @@
+---
+layout: default
+title: CloudJay的Blog
+---
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hello</title>
+</head>
+<body>
+  <h2>{{ page.title }}</h2>
+  　　<p>最新文章</p>
+  　　<ul>
+  　　　　{% for post in site.posts %}
+  　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  　　　　{% endfor %}
+  　　</ul>
+</body>
+</html>
